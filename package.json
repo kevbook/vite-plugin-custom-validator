@@ -1,0 +1,47 @@
+{
+  "name": "@kevbook/vite-plugin-custom-validator",
+  "version": "0.0.1",
+  "description": "Vite plugin to add a custom validator function at build or dev time",
+  "keywords": [
+    "vite",
+    "vite-plugin",
+    "validation"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "dev": "unbuild --watch",
+    "format": "prettier --single-quote --write .",
+    "check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "jiti": "^1.20.0"
+  },
+  "devDependencies": {
+    "@tsconfig/strictest": "^2.0.2",
+    "@types/node": "^20.4.5",
+    "prettier": "^3.0.0",
+    "typescript": "^5.2.2",
+    "unbuild": "^1.2.1"
+  },
+  "peerDependencies": {
+    "vite": "^4"
+  }
+}
