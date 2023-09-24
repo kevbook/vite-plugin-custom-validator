@@ -3,7 +3,7 @@ import jiti from 'jiti';
 
 type PluginOptions = {
   file: string;
-  validator: (module: unknown) => void;
+  validator: (module: any) => void;
 };
 
 async function validatorFn(options: PluginOptions) {
